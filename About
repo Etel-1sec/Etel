@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Etel</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px rgba(77, 149, 253, 0.5); }
+            50% { text-shadow: 0 0 20px rgba(77, 149, 253, 0.8); }
+            100% { text-shadow: 0 0 5px rgba(77, 149, 253, 0.5); }
+        }
+        
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0a0a14;
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            animation: fadeIn 1s ease-out;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .blue-text {
+            color: #4d95fd;
+            animation: glow 3s infinite;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+            animation: fadeIn 0.5s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        nav ul li:nth-child(1) { animation-delay: 0.3s; }
+        nav ul li:nth-child(2) { animation-delay: 0.5s; }
+        nav ul li:nth-child(3) { animation-delay: 0.7s; }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            position: relative;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+        
+        nav ul li a:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #4d95fd;
+            transition: width 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            color: #4d95fd;
+        }
+        
+        nav ul li a:hover:before {
+            width: 100%;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.5s forwards;
+        }
+        
+        h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        h1:after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: #4d95fd;
+            margin: 20px auto 0;
+            transform: scaleX(0);
+            transition: transform 1s ease;
+            animation: slideInLeft 1.5s ease-out 1s forwards;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 1.2s forwards;
+        }
+        
+        .content-section {
+            margin: 60px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #4d95fd;
+            margin: 15px auto 0;
+        }
+        
+        .section-content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+        
+        .value-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .value-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 0%, rgba(77, 149, 253, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .value-card:hover:before {
+            opacity: 1;
+        }
+        
+        .value-title {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #4d95fd;
+        }
+        
+        .button-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+        
+        .btn {
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+        
+        .btn:hover:before {
+            width: 100%;
+        }
+        
+        .btn-primary {
+            background-color: #4d95fd;
+            color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(77, 149, 253, 0.3);
+        }
+        
+        .btn-primary:hover {
+            box-shadow: 0 6px 20px rgba(77, 149, 253, 0.5);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-secondary:hover {
+            border-color: #4d95fd;
+            color: #4d95fd;
+            transform: translateY(-2px);
+        }
+        
+        /* Reveal animation for sections when scrolled into view */
+        .reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo"><span class="blue-text">E</span>tel</div>
+            <nav>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Our Goals</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="hero">
+            <h1>About Etel</h1>
+            <p class="subtitle">Revolutionizing urban transportation with sustainable, accessible e-mobility solutions.</p>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Our Story</h2>
+            <div class="section-content">
+                <p>Etel was born from a simple yet powerful vision: to transform urban commuting through accessible, eco-friendly transportation. We recognized the growing challenges of urban mobility – congestion, pollution, and the high cost of transportation – and set out to create a solution that addresses all three.</p>
+                <p>Starting with e-rickshaws, we've developed a comprehensive platform that connects passengers directly to drivers of electric vehicles. Our journey begins with revolutionizing the rickshaw experience, but our ambition extends to creating an integrated network of all electric mobility options including e-scooters, e-bikes, and e-cars.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Our Mission</h2>
+            <div class="section-content">
+                <p>We're on a mission to make sustainable transportation the default choice for urban commuters. By combining cutting-edge technology with affordable electric vehicle options, we're building a future where clean mobility is accessible to everyone.</p>
+                <p>Etel isn't just a transportation service – it's a movement toward smarter, cleaner cities and a commitment to reducing the environmental impact of daily commutes while improving the livelihood of drivers in our communities.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <h3 class="value-title">Sustainability</h3>
+                    <p>Every trip with Etel contributes to reducing carbon emissions. We're committed to measuring and improving our environmental impact continuously.</p>
+                </div>
+                <div class="value-card">
+                    <h3 class="value-title">Accessibility</h3>
+                    <p>We believe sustainable transportation should be available to everyone, regardless of income level or location within the city.</p>
+                </div>
+                <div class="value-card">
+                    <h3 class="value-title">Innovation</h3>
+                    <p>Our technology platform is constantly evolving to improve the experience for both riders and drivers, making e-mobility more efficient and enjoyable.</p>
+                </div>
+                <div class="value-card">
+                    <h3 class="value-title">Community</h3>
+                    <p>We support our drivers with fair compensation and growth opportunities, creating positive economic impact in the communities we serve.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">The Etel Difference</h2>
+            <div class="section-content">
+                <p>What sets Etel apart is our exclusive focus on electric vehicles. While other platforms may include some electric options, our specialized approach allows us to optimize the entire experience around the unique benefits and requirements of e-mobility.</p>
+                <p>Our platform is designed from the ground up to support electric vehicle drivers with features like charging station mapping, battery management insights, and customized routing to maximize efficiency and range.</p>
+                <p>For passengers, this means not just a ride, but a consistently clean, quiet, and modern transportation experience that they can feel good about choosing.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2 class="section-title">Join Our Journey</h2>
+            <div class="section-content">
+                <p>Etel is just beginning. As we launch our e-rickshaw service, we're already working on expanding to other electric vehicle types and new markets. Our vision is to create a comprehensive e-mobility network that makes sustainable transportation the most convenient choice for any urban journey.</p>
+            </div>
+            <div class="button-container">
+                <a href="#" class="btn btn-primary">Launching Soon</a>
+                <a href="#" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Animation for sections when scrolled into view
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.content-section');
+            
+            function checkVisibility() {
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (sectionTop < windowHeight * 0.8) {
+                        section.classList.add('reveal');
+                    }
+                });
+            }
+            
+            // Initial check
+            checkVisibility();
+            
+            // Check on scroll
+            window.addEventListener('scroll', checkVisibility);
+        });
+    </script>
+</body>
+</html>
