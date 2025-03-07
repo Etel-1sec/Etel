@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ShopTrack</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <h2>ShopTrack</h2>
+                </div>
+                <button id="sidebarToggle" class="sidebar-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="shop-info">
+                <div class="shop-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+                <div class="shop-details">
+                    <h3>Coffee Corner</h3>
+                    <p>Main Branch</p>
+                </div>
+                <div class="shop-dropdown">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="orders.html">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>Orders</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pending-payments.html">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Pending Payments</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="menu-items.html">
+                            <i class="fas fa-utensils"></i>
+                            <span>Menu Items</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="analytics.html">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Analytics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="branches.html">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Branches</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <div class="user-info">
+                    <div class="user-avatar">
+                        <img src="/api/placeholder/40/40" alt="User Avatar">
+                    </div>
+                    <div class="user-details">
+                        <h4>John Doe</h4>
+                        <p>Owner</p>
+                    </div>
+                </div>
+                <div class="logout-btn">
+                    <a href="login.html">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <nav class="top-nav">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search orders, customers...">
+                </div>
+                
+                <div class="nav-actions">
+                    <div class="nav-item">
+                        <button class="notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="badge">3</span>
+                        </button>
+                    </div>
+                    <div class="nav-item">
+                        <button class="theme-toggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                    <div class="nav-item">
+                        <button class="help-btn">
+                            <i class="fas fa-question-circle"></i>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <div class="page-header">
+                    <h1>Dashboard</h1>
+                    <div class="date-filter">
+                        <span>Today</span>
+                        <i class="fas fa-calendar"></i>
+                    </div>
+                </div>
+                
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: rgba(74, 108, 247, 0.1);">
+                            <i class="fas fa-shopping-cart" style="color: #4a6cf7;"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Total Orders</h3>
+                            <p class="stat-value">145</p>
+                            <p class="stat-change positive">+12.5% <span>vs yesterday</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: rgba(75, 192, 192, 0.1);">
+                            <i class="fas fa-dollar-sign" style="color: #4bc0c0;"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Total Revenue</h3>
+                            <p class="stat-value">$1,258.75</p>
+                            <p class="stat-change positive">+8.2% <span>vs yesterday</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: rgba(255, 193, 7, 0.1);">
+                            <i class="fas fa-credit-card" style="color: #ffc107;"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Pending Payments</h3>
+                            <p class="stat-value">$187.50</p>
+                            <p class="stat-change negative">+5.8% <span>vs yesterday</span></p>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background-color: rgba(255, 99, 132, 0.1);">
+                            <i class="fas fa-users" style="color: #ff6384;"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Customers</h3>
+                            <p class="stat-value">98</p>
+                            <p class="stat-change positive">+4.1% <span>vs yesterday</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Actions -->
+                <div class="quick-actions">
+                    <h2>Quick Actions</h2>
+                    <div class="actions-grid">
+                        <button class="action-btn">
+                            <i class="fas fa-plus"></i>
+                            <span>New Order</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-utensils"></i>
+                            <span>Add Menu Item</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Record Payment</span>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-file-invoice"></i>
+                            <span>Generate Report</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Charts Section -->
+                <div class="charts-section">
+                    <div class="chart-container">
+                        <div class="chart-header">
+                            <h2>Sales Overview</h2>
+                            <div class="chart-actions">
+                                <button class="chart-period active">Day</button>
+                                <button class="chart-period">Week</button>
+                                <button class="chart-period">Month</button>
+                            </div>
+                        </div>
+                        <div class="chart">
+                            <!-- This would be a canvas element with Chart.js in a real implementation -->
+                            <img src="/api/placeholder/800/300" alt="Sales Chart Placeholder">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Recent Orders and Best Selling Items -->
+                <div class="data-grid">
+                    <!-- Recent Orders -->
+                    <div class="data-card">
+                        <div class="data-header">
+                            <h2>Recent Orders</h2>
+                            <a href="orders.html" class="view-all">View All</a>
+                        </div>
+                        <div class="data-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Time</th>
+                                        <th>Amount</th>
+                                        <th>Payment</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#ORD-2458</td>
+                                        <td>10:45 AM</td>
+                                        <td>$24.50</td>
+                                        <td><span class="badge success">Paid</span></td>
+                                        <td><span class="status-pill completed">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-2457</td>
+                                        <td>10:30 AM</td>
+                                        <td>$15.75</td>
+                                        <td><span class="badge success">Paid</span></td>
+                                        <td><span class="status-pill completed">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-2456</td>
+                                        <td>10:15 AM</td>
+                                        <td>$32.00</td>
+                                        <td><span class="badge success">Paid</span></td>
+                                        <td><span class="status-pill completed">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-2455</td>
+                                        <td>9:50 AM</td>
+                                        <td>$18.25</td>
+                                        <td><span class="badge warning">Pending</span></td>
+                                        <td><span class="status-pill processing">Processing</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-2454</td>
+                                        <td>9:30 AM</td>
+                                        <td>$21.75</td>
+                                        <td><span class="badge success">Paid</span></td>
+                                        <td><span class="status-pill completed">Completed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Best Selling Items -->
+                    <div class="data-card">
+                        <div class="data-header">
+                            <h2>Best Selling Items</h2>
+                            <a href="menu-items.html" class="view-all">View All</a>
+                        </div>
+                        <div class="best-selling-items">
+                            <div class="item-card">
+                                <div class="item-image">
+                                    <img src="/api/placeholder/60/60" alt="Cappuccino">
+                                </div>
+                                <div class="item-details">
+                                    <h4>Cappuccino</h4>
+                                    <div class="item-stats">
+                                        <span>85 orders</span>
+                                        <span>$4.50</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 85%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="item-card">
+                                <div class="item-image">
+                                    <img src="/api/placeholder/60/60" alt="Espresso">
+                                </div>
+                                <div class="item-details">
+                                    <h4>Espresso</h4>
+                                    <div class="item-stats">
+                                        <span>72 orders</span>
+                                        <span>$3.00</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 72%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="item-card">
+                                <div class="item-image">
+                                    <img src="/api/placeholder/60/60" alt="Latte">
+                                </div>
+                                <div class="item-details">
+                                    <h4>Latte</h4>
+                                    <div class="item-stats">
+                                        <span>68 orders</span>
+                                        <span>$4.75</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 68%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="item-card">
+                                <div class="item-image">
+                                    <img src="/api/placeholder/60/60" alt="Mocha">
+                                </div>
+                                <div class="item-details">
+                                    <h4>Mocha</h4>
+                                    <div class="item-stats">
+                                        <span>54 orders</span>
+                                        <span>$5.25</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 54%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="item-card">
+                                <div class="item-image">
+                                    <img src="/api/placeholder/60/60" alt="Croissant">
+                                </div>
+                                <div class="item-details">
+                                    <h4>Croissant</h4>
+                                    <div class="item-stats">
+                                        <span>42 orders</span>
+                                        <span>$3.50</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 42%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Inventory Alert and Activity Feed -->
+                <div class="data-grid">
+                    <!-- Inventory Alert -->
+                    <div class="data-card">
+                        <div class="data-header">
+                            <h2>Inventory Alert</h2>
+                            <a href="inventory.html" class="view-all">View All</a>
+                        </div>
+                        <div class="data-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Current Stock</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Coffee Beans (Arabica)</td>
+                                        <td>2.5 kg</td>
+                                        <td><span class="badge warning">Low</span></td>
+                                        <td><button class="small-btn">Order</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Milk</td>
+                                        <td>5 L</td>
+                                        <td><span class="badge success">Good</span></td>
+                                        <td><button class="small-btn">Order</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sugar</td>
+                                        <td>1.2 kg</td>
+                                        <td><span class="badge danger">Critical</span></td>
+                                        <td><button class="small-btn">Order</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chocolate Syrup</td>
+                                        <td>0.8 L</td>
+                                        <td><span class="badge warning">Low</span></td>
+                                        <td><button class="small-btn">Order</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <!-- Activity Feed -->
+                    <div class="data-card">
+                        <div class="data-header">
+                            <h2>Recent Activity</h2>
+                            <a href="activity.html" class="view-all">View All</a>
+                        </div>
+                        <div class="activity-feed">
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p><strong>New Order</strong> #ORD-2458 has been placed</p>
+                                    <span class="activity-time">5 minutes ago</span>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p><strong>Payment Received</strong> for order #ORD-2456</p>
+                                    <span class="activity-time">15 minutes ago</span>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p><strong>Menu Item Updated</strong> - Cappuccino price changed from $4.25 to $4.50</p>
+                                    <span class="activity-time">1 hour ago</span>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p><strong>New Customer</strong> Sarah Johnson registered</p>
+                                    <span class="activity-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <p><strong>Inventory Alert</strong> Sugar is running low</p>
+                                    <span class="activity-time">3 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer -->
+            <footer class="dashboard-footer">
+                <div class="footer-left">
+                    <p>&copy; 2025 ShopTrack. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="help.html">Help Center</a>
+                </div>
+            </footer>
+        </main>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chart.js/3.7.0/chart.min.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
