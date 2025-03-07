@@ -1,301 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopTrack - Smart Order Management for Shopkeepers</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopTrack - Smart Order Management for Shopkeepers</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>ShopTrack</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="auth-buttons">
-                <a href="login.html" class="btn btn-outline">Sign In</a>
-                <a href="register.html" class="btn btn-primary">Sign Up</a>
-            </div>
-        </div>
-    </header>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <h1>ShopTrack</h1>
+      </div>
+      <nav>
+        <button id="hamburger" class="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="login.html" class="btn btn-outline">Sign In</a>
+        <a href="register.html" class="btn btn-primary">Sign Up</a>
+      </div>
+    </div>
+  </header>
 
-    <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Transform Your Shop Management</h1>
-                <p>Track orders, manage payments, and grow your business with our all-in-one platform for shopkeepers.</p>
-                <div class="hero-buttons">
-                    <a href="register.html" class="btn btn-primary btn-large">Get Started</a>
-                    <a href="#demo" class="btn btn-outline btn-large">View Demo</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <img src="/api/placeholder/600/400" alt="ShopTrack Dashboard Preview">
-            </div>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Transform Your Shop Management</h1>
+        <p>Track orders, manage payments, and grow your business with our all-in-one platform for shopkeepers.</p>
+        <div class="hero-buttons">
+          <a href="register.html" class="btn btn-primary btn-large">Get Started</a>
+          <a href="#demo" class="btn btn-outline btn-large">View Demo</a>
         </div>
-    </section>
+      </div>
+      <div class="hero-image">
+        <img src="/api/placeholder/600/400" alt="ShopTrack Dashboard Preview">
+      </div>
+    </div>
+  </section>
 
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-header">
-                <h2>Features</h2>
-                <p>Everything you need to run your shop efficiently</p>
-            </div>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <h3>Easy Order Management</h3>
-                    <p>Quick tap interface to record customer orders and generate receipts instantly.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-credit-card"></i>
-                    </div>
-                    <h3>Flexible Payment Options</h3>
-                    <p>Record cash, online payments, and manage customer credit easily.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Advanced Analytics</h3>
-                    <p>Track your shop's performance with detailed graphs and reports.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-store"></i>
-                    </div>
-                    <h3>Multi-Branch Support</h3>
-                    <p>Connect multiple locations and monitor them all from a single dashboard.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>Customizable Interface</h3>
-                    <p>Personalize the app with themes and layouts that work for your business.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-lock"></i>
-                    </div>
-                    <h3>Secure Access</h3>
-                    <p>Built-in app lock and user permission controls to protect your data.</p>
-                </div>
-            </div>
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Features</h2>
+        <p>Everything you need to run your shop efficiently</p>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shopping-cart"></i>
+          </div>
+          <h3>Easy Order Management</h3>
+          <p>Quick tap interface to record customer orders and generate receipts instantly.</p>
         </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Us</h2>
-                <p>We're dedicated to empowering small businesses</p>
-            </div>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="/api/placeholder/500/300" alt="Team photo">
-                </div>
-                <div class="about-text">
-                    <h3>Our Story</h3>
-                    <p>ShopTrack was born from the challenges faced by local shopkeepers in managing their daily operations. We saw the need for a simple yet powerful solution that doesn't require technical expertise.</p>
-                    <p>Our team of retail experts and developers worked closely with shop owners to create a platform that addresses real-world problems and makes running a business easier.</p>
-                    <p>Today, we're proud to help thousands of shopkeepers across the country streamline their operations and focus on what matters most - serving their customers.</p>
-                </div>
-            </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-credit-card"></i>
+          </div>
+          <h3>Flexible Payment Options</h3>
+          <p>Record cash, online payments, and manage customer credit easily.</p>
         </div>
-    </section>
-
-    <section id="pricing" class="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2>Simple Pricing</h2>
-                <p>Affordable plans for businesses of all sizes</p>
-            </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Basic</h3>
-                        <div class="price">$19<span>/month</span></div>
-                    </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Single shop</li>
-                            <li><i class="fas fa-check"></i> Order management</li>
-                            <li><i class="fas fa-check"></i> Payment tracking</li>
-                            <li><i class="fas fa-check"></i> Basic reports</li>
-                            <li><i class="fas fa-times"></i> Analytics</li>
-                            <li><i class="fas fa-times"></i> Multiple branches</li>
-                        </ul>
-                    </div>
-                    <div class="pricing-cta">
-                        <a href="register.html" class="btn btn-outline btn-block">Get Started</a>
-                    </div>
-                </div>
-                <div class="pricing-card featured">
-                    <div class="pricing-header">
-                        <h3>Standard</h3>
-                        <div class="price">$49<span>/month</span></div>
-                    </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Up to 3 shops</li>
-                            <li><i class="fas fa-check"></i> Order management</li>
-                            <li><i class="fas fa-check"></i> Payment tracking</li>
-                            <li><i class="fas fa-check"></i> Advanced reports</li>
-                            <li><i class="fas fa-check"></i> Analytics dashboard</li>
-                            <li><i class="fas fa-times"></i> Custom branding</li>
-                        </ul>
-                    </div>
-                    <div class="pricing-cta">
-                        <a href="register.html" class="btn btn-primary btn-block">Get Started</a>
-                    </div>
-                </div>
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Premium</h3>
-                        <div class="price">$99<span>/month</span></div>
-                    </div>
-                    <div class="pricing-features">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Unlimited shops</li>
-                            <li><i class="fas fa-check"></i> Order management</li>
-                            <li><i class="fas fa-check"></i> Payment tracking</li>
-                            <li><i class="fas fa-check"></i> Advanced reports</li>
-                            <li><i class="fas fa-check"></i> Analytics dashboard</li>
-                            <li><i class="fas fa-check"></i> Custom branding</li>
-                        </ul>
-                    </div>
-                    <div class="pricing-cta">
-                        <a href="register.html" class="btn btn-outline btn-block">Get Started</a>
-                    </div>
-                </div>
-            </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Advanced Analytics</h3>
+          <p>Track your shop's performance with detailed graphs and reports.</p>
         </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2>Contact Us</h2>
-                <p>Have questions? We're here to help</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block">Send Message</button>
-                    </form>
-                </div>
-                <div class="contact-info">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>Address</h4>
-                            <p>123 Business Street, Tech City, TC 12345</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>Phone</h4>
-                            <p>+1 (555) 123-4567</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="info-content">
-                            <h4>Email</h4>
-                            <p>info@shoptrack.com</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-store"></i>
+          </div>
+          <h3>Multi-Branch Support</h3>
+          <p>Connect multiple locations and monitor them all from a single dashboard.</p>
         </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h2>ShopTrack</h2>
-                    <p>Empowering shopkeepers with smart technology</p>
-                </div>
-                <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Product</h4>
-                        <ul>
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#pricing">Pricing</a></li>
-                            <li><a href="#">Demo</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-group">
-                        <h4>Company</h4>
-                        <ul>
-                            <li><a href="#about">About Us</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li><a href="#">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div class="link-group">
-                        <h4>Resources</h4>
-                        <ul>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Support</a></li>
-                            <li><a href="#">Documentation</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-social">
-                    <h4>Connect With Us</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 ShopTrack. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
-            </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <h3>Customizable Interface</h3>
+          <p>Personalize the app with themes and layouts that work for your business.</p>
         </div>
-    </footer>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-lock"></i>
+          </div>
+          <h3>Secure Access</h3>
+          <p>Built-in app lock and user permission controls to protect your data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="scripts.js"></script>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>About Us</h2>
+        <p>We're dedicated to empowering small businesses</p>
+      </div>
+      <div class="about-content">
+        <div class="about-image">
+          <img src="/api/placeholder/500/300" alt="Team photo">
+        </div>
+        <div class="about-text">
+          <h3>Our Story</h3>
+          <p>ShopTrack was born from the challenges faced by local shopkeepers in managing their daily operations. We saw the need for a simple yet powerful solution that doesn't require technical expertise.</p>
+          <p>Our team of retail experts and developers worked closely with shop owners to create a platform that addresses real-world problems and makes running a business easier.</p>
+          <p>Today, we're proud to help thousands of shopkeepers across the country streamline their operations and focus on what matters most - serving their customers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section id="pricing" class="pricing">
+    <div class="container">
+      <div class="section-header">
+        <h2>Simple Pricing</h2>
+        <p>Affordable plans for businesses of all sizes</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Basic</h3>
+            <div class="price">$19<span>/month</span></div>
+          </div>
+          <div class="pricing-features">
+            <ul>
+              <li><i class="fas fa-check"></i> Single shop</li>
+              <li><i class="fas fa-check"></i> Order management</li>
+              <li><i class="fas fa-check"></i> Payment tracking</li>
+              <li><i class="fas fa-check"></i> Basic reports</li>
+              <li><i class="fas fa-times"></i> Analytics</li>
+              <li><i class="fas fa-times"></i> Multiple branches</li>
+            </ul>
+          </div>
+          <div class="pricing-cta">
+            <a href="register.html" class="btn btn-outline btn-block">Get Started</a>
+          </div>
+        </div>
+        <div class="pricing-card featured">
+          <div class="pricing-header">
+            <h3>Standard</h3>
+            <div class="price">$49<span>/month</span></div>
+          </div>
+          <div class="pricing-features">
+            <ul>
+              <li><i class="fas fa-check"></i> Up to 3 shops</li>
+              <li><i class="fas fa-check"></i> Order management</li>
+              <li><i class="fas fa-check"></i> Payment tracking</li>
+              <li><i class="fas fa-check"></i> Advanced reports</li>
+              <li><i class="fas fa-check"></i> Analytics dashboard</li>
+              <li><i class="fas fa-times"></i> Custom branding</li>
+            </ul>
+          </div>
+          <div class="pricing-cta">
+            <a href="register.html" class="btn btn-primary btn-block">Get Started</a>
+          </div>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-header">
+            <h3>Premium</h3>
+            <div class="price">$99<span>/month</span></div>
+          </div>
+          <div class="pricing-features">
+            <ul>
+              <li><i class="fas fa-check"></i> Unlimited shops</li>
+              <li><i class="fas fa-check"></i> Order management</li>
+              <li><i class="fas fa-check"></i> Payment tracking</li>
+              <li><i class="fas fa-check"></i> Advanced reports</li>
+              <li><i class="fas fa-check"></i> Analytics dashboard</li>
+              <li><i class="fas fa-check"></i> Custom branding</li>
+            </ul>
+          </div>
+          <div class="pricing-cta">
+            <a href="register.html" class="btn btn-outline btn-block">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contact Us</h2>
+        <p>Have questions? We're here to help</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="info-content">
+              <h4>Address</h4>
+              <p>123 Business Street, Tech City, TC 12345</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="info-content">
+              <h4>Phone</h4>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info-content">
+              <h4>Email</h4>
+              <p>info@shoptrack.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>ShopTrack</h2>
+          <p>Empowering shopkeepers with smart technology</p>
+        </div>
+        <div class="footer-links">
+          <div class="link-group">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#">Demo</a></li>
+            </ul>
+          </div>
+          <div class="link-group">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <div class="link-group">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Documentation</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-social">
+          <h4>Connect With Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ShopTrack. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
