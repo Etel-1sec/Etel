@@ -1,98 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - ShopTrack</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="auth.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In - ShopTrack</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="auth-container">
-        <div class="auth-card">
-            <div class="auth-header">
-                <a href="index.html" class="auth-logo">ShopTrack</a>
-                <h2>Welcome Back</h2>
-                <p>Sign in to access your shop dashboard</p>
-            </div>
-            
-            <form id="loginForm" class="auth-form">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <div class="input-group">
-                        <span class="input-icon"><i class="fas fa-envelope"></i></span>
-                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <div class="input-group">
-                        <span class="input-icon"><i class="fas fa-lock"></i></span>
-                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                        <span class="password-toggle"><i class="fas fa-eye"></i></span>
-                    </div>
-                </div>
-                
-                <div class="form-options">
-                    <div class="remember-me">
-                        <input type="checkbox" id="remember" name="remember">
-                        <label for="remember">Remember me</label>
-                    </div>
-                    <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
-                </div>
-                
-                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-                
-                <div class="auth-divider">
-                    <span>Or sign in with</span>
-                </div>
-                
-                <div class="social-auth">
-                    <button type="button" class="social-btn google">
-                        <i class="fab fa-google"></i>
-                        <span>Google</span>
-                    </button>
-                    <button type="button" class="social-btn facebook">
-                        <i class="fab fa-facebook-f"></i>
-                        <span>Facebook</span>
-                    </button>
-                </div>
-            </form>
-            
-            <div class="auth-footer">
-                <p>Don't have an account? <a href="register.html">Sign Up</a></p>
-            </div>
-        </div>
-        
-        <div class="auth-image">
-            <div class="overlay"></div>
-            <div class="image-content">
-                <h2>Manage Your Shop Smarter</h2>
-                <p>Track orders, payments, and analytics all in one place.</p>
-                <div class="features-list">
-                    <div class="feature-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Easy order tracking</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Payment management</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Performance analytics</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Multi-branch support</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+  <div class="auth-container">
+    <div class="auth-card">
+      <div class="auth-header">
+        <a href="index.html" class="auth-logo">ShopTrack</a>
+        <h2>Welcome Back</h2>
+        <p>Sign in to access your shop dashboard</p>
+      </div>
 
-    <script src="auth.js"></script>
+      <!-- Login Form -->
+      <form id="loginForm" class="auth-form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <div class="input-group">
+            <span class="input-icon"><i class="fas fa-envelope"></i></span>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-group">
+            <span class="input-icon"><i class="fas fa-lock"></i></span>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <span class="password-toggle"><i class="fas fa-eye"></i></span>
+          </div>
+        </div>
+
+        <div class="form-options">
+          <div class="remember-me">
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember">Remember me</label>
+          </div>
+          <a href="forgot-password.html" class="forgot-password">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+
+        <div class="auth-divider">
+          <span>Or sign in with</span>
+        </div>
+
+        <!-- Social Login Buttons -->
+        <div class="social-auth">
+          <button type="button" class="social-btn google" id="googleLogin">
+            <i class="fab fa-google"></i>
+            <span>Google</span>
+          </button>
+          <button type="button" class="social-btn facebook" id="facebookLogin">
+            <i class="fab fa-facebook-f"></i>
+            <span>Facebook</span>
+          </button>
+        </div>
+      </form>
+
+      <div class="auth-footer">
+        <p>Don't have an account? <a href="register.html">Sign Up</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" class="scroll-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+  <script src="auth.js"></script>
 </body>
 </html>
