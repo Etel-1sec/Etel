@@ -1,4 +1,34 @@
-/* Base Styles */
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Button Hover Effects */
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Card Hover Effects */
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-content, .feature-card, .about-content, .contact-form {
+  animation: fadeIn 1s ease-out;
+}/* Base Styles */
 :root {
     --primary-color: #4a6cf7;
     --primary-dark: #3a55d1;
