@@ -1,23 +1,17 @@
-// Welcome animation
-window.addEventListener('load', () => {
-    const overlay = document.querySelector('.welcome-overlay');
-    setTimeout(() => {
-        overlay.style.display = 'none';
-    }, 2500);
-    
-    // Add hero background animation
-    document.querySelector('.hero').classList.add('animated');
+// Hamburger Menu Toggle
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 });
 
-// Scroll animations
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
+// Smooth Scrolling for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth"
     });
-}, { threshold: 0.1 });
-
-document.querySelectorAll('.scroll-fade').forEach((element) => {
-    observer.observe(element);
+  });
 });
