@@ -16,6 +16,18 @@ body {
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     overflow: hidden;
+    animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .auth-card {
@@ -23,6 +35,11 @@ body {
     padding: 40px;
     display: flex;
     flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.auth-card:hover {
+    transform: translateY(-5px);
 }
 
 .auth-image {
@@ -109,6 +126,11 @@ body {
 
 .input-group {
     position: relative;
+    transition: var(--transition);
+}
+
+.input-group:focus-within {
+    transform: scale(1.02);
 }
 
 .input-icon {
